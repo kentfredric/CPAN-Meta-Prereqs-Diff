@@ -1,11 +1,15 @@
+use 5.008;    # utf8
 use strict;
 use warnings;
+use utf8;
 
 package CPAN::Meta::Prereqs::Diff;
 
 our $VERSION = '0.001000';
 
 # ABSTRACT: Compare dependencies between releases using CPAN Meta.
+
+our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Moo 1.000008 qw( has );
 use List::MoreUtils qw( uniq );
