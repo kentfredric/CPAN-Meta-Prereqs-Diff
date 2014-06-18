@@ -18,7 +18,7 @@ has 'requirement' => ( is => ro =>, required => 1 );
 with 'CPAN::Meta::Prereqs::Diff::Role::Change';
 
 sub is_addition { }
-sub is_removal  { 1 }
+sub is_removal  { return 1 }
 sub is_change   { }
 
 sub describe {
