@@ -7,7 +7,7 @@ package CPAN::Meta::Prereqs::Diff::Role::Change;
 
 our $VERSION = '0.001000';
 
-# ABSTRACT: A base behaviour for prereq changes
+# ABSTRACT: A base behavior for pre-requisite changes
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
@@ -34,7 +34,7 @@ __END__
 
 =head1 NAME
 
-CPAN::Meta::Prereqs::Diff::Role::Change - A base behaviour for prereq changes
+CPAN::Meta::Prereqs::Diff::Role::Change - A base behavior for pre-requisite changes
 
 =head1 VERSION
 
