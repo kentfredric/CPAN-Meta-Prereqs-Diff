@@ -15,7 +15,7 @@ use Moo qw( with has extends );
 
 extends 'CPAN::Meta::Prereqs::Diff::Change';
 
-sub is_downgrade { 1 }
+sub is_downgrade { return 1 }
 
 sub describe {
   my ($self) = @_;
