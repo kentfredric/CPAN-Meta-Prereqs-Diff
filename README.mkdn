@@ -1,6 +1,6 @@
 # NAME
 
-CPAN::Meta::Prereqs::Diff - Compare dependencies between releases using CPAN Meta.
+CPAN::Meta::Prereqs::Diff - Compare dependencies between releases using CPAN::Meta.
 
 # VERSION
 

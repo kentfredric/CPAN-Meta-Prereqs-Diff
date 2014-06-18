@@ -7,7 +7,7 @@ package CPAN::Meta::Prereqs::Diff;
 
 our $VERSION = '0.001000';
 
-# ABSTRACT: Compare dependencies between releases using CPAN Meta.
+# ABSTRACT: Compare dependencies between releases using CPAN::Meta.
 
 # AUTHORITY
 
@@ -26,16 +26,16 @@ has 'old_prereqs' => ( is => ro =>, required => 1 );
 has '_real_old_prereqs' => (
   is      => ro  =>,
   lazy    => 1,
-  builder => sub { return $_[0]->_get_prereqs( $_[0]->old_prereqs ) }
+  builder => sub { return $_[0]->_get_prereqs( $_[0]->old_prereqs ) },
 );
 has '_real_new_prereqs' => (
   is      => ro  =>,
   lazy    => 1,
-  builder => sub { return $_[0]->_get_prereqs( $_[0]->new_prereqs ) }
+  builder => sub { return $_[0]->_get_prereqs( $_[0]->new_prereqs ) },
 );
 
 sub _dep_add {
-  my ( $self, $phase, $type, $module, $requirement ) = @_;
+  my ( undef, $phase, $type, $module, $requirement ) = @_;
   return CPAN::Meta::Prereqs::Diff::Addition->new(
     phase       => $phase,
     type        => $type,
@@ -45,7 +45,7 @@ sub _dep_add {
 }
 
 sub _dep_remove {
-  my ( $self, $phase, $type, $module, $requirement ) = @_;
+  my ( undef, $phase, $type, $module, $requirement ) = @_;
   return CPAN::Meta::Prereqs::Diff::Removal->new(
     phase       => $phase,
     type        => $type,
@@ -54,9 +54,10 @@ sub _dep_remove {
   );
 }
 
+## no critic (Subroutines::ProhibitManyArgs)
 sub _dep_change {
-  my ( $self, $phase, $type, $module, $old_requirement, $new_requirement ) = @_;
-  if ( $old_requirement =~ /[<>=, ]/ or $new_requirement =~ /[<>=, ]/ ) {
+  my ( undef, $phase, $type, $module, $old_requirement, $new_requirement ) = @_;
+  if ( $old_requirement =~ /[<>=, ]/msx or $new_requirement =~ /[<>=, ]/msx ) {
     return CPAN::Meta::Prereqs::Diff::Change->new(
       phase           => $phase,
       type            => $type,
@@ -88,7 +89,7 @@ sub _dep_change {
 }
 
 sub _get_prereqs {
-  my ( $self, $input_prereqs ) = @_;
+  my ( undef, $input_prereqs ) = @_;
   if ( ref $input_prereqs and blessed $input_prereqs ) {
     return $input_prereqs if $input_prereqs->isa('CPAN::Meta::Prereqs');
     return $input_prereqs->effective_prereqs if $input_prereqs->isa('CPAN::Meta');
@@ -98,7 +99,11 @@ sub _get_prereqs {
     return CPAN::Meta::Prereqs->new($input_prereqs);
   }
   require Carp;
-  Carp::croak(q[ prereqs parameters take either CPAN::Meta::Prereqs, CPAN::Meta, or a valid CPAN::Meta::Prereqs hash structure]);
+  my $message = <<'EOF';
+prereqs parameters take either CPAN::Meta::Prereqs, CPAN::Meta,
+or a valid CPAN::Meta::Prereqs hash structure.
+EOF
+  Carp::croak($message);
 }
 
 sub _phase_rel_diff {
