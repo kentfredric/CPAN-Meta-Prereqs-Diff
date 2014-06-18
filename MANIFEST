@@ -30,6 +30,7 @@ t/00-compile/lib_CPAN_Meta_Prereqs_Diff_Upgrade_pm.t
 t/00-compile/lib_CPAN_Meta_Prereqs_Diff_pm.t
 t/00-report-prereqs.t
 t/basic.t
+t/realworld.t
 weaver.ini
 xt/author/critic.t
 xt/release/cpan-changes.t
