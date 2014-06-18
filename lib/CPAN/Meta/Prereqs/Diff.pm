@@ -251,32 +251,32 @@ version 0.001000
   for my $dep (@prereqs) {
     if ( $dep->is_addition ) {
       # runtime.requires: + Foo::Bar 0.4
-      printf "%s.%s : + %s %s", 
+      printf "%s.%s : + %s %s",
         $dep->phase, $dep->type, $dep->module, $dep->requirement;
       next;
     }
     if ( $dep->is_removal ) {
       # runtime.requires: - Foo::Bar 0.4
-      printf "%s.%s : - %s %s", 
+      printf "%s.%s : - %s %s",
         $dep->phase, $dep->type, $dep->module, $dep->requirement;
       next;
     }
     if ( $dep->is_change ) {
       if ( $dep->is_upgrade ) {
         # runtime.requires: ↑ Foo::Bar 0.4 → 0.5
-        printf "%s.%s : \x{2191} %s \x{2192} %s", 
+        printf "%s.%s : \x{2191} %s \x{2192} %s",
           $dep->phase, $dep->type, $dep->module, $dep->old_requirement, $dep->new_requirement;
         next;
       }
       if ( $dep->is_downgrade ) {
         # runtime.requires: ↓ Foo::Bar 0.5 → 0.4
-        printf "%s.%s : \x{2193} %s %s \x{2192} %s", 
+        printf "%s.%s : \x{2193} %s %s \x{2192} %s",
           $dep->phase, $dep->type, $dep->module, $dep->old_requirement, $dep->new_requirement;
         next;
       }
       # changes that can't be easily determined upgrades or downgrades
       # runtime.requires: ~ Foo::Bar >=0.5, <=0.7 → >=0.4, <=0.8
-      printf "%s.%s : ~ %s %s \x{2192} %s", 
+      printf "%s.%s : ~ %s %s \x{2192} %s",
         $dep->phase, $dep->type, $dep->module, $dep->old_requirement, $dep->new_requirement;
       next;
     }
