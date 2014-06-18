@@ -1,5 +1,5 @@
 ---
-abstract: 'Compare dependencies between releases using CPAN Meta.'
+abstract: 'Compare dependencies between releases using CPAN::Meta.'
 author:
   - 'Kent Fredric <kentfredric@gmail.com>'
 build_requires:

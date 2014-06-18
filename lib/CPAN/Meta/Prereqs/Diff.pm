@@ -7,7 +7,7 @@ package CPAN::Meta::Prereqs::Diff;
 
 our $VERSION = '0.001000';
 
-# ABSTRACT: Compare dependencies between releases using CPAN Meta.
+# ABSTRACT: Compare dependencies between releases using CPAN::Meta.
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
@@ -172,7 +172,7 @@ __END__
 
 =head1 NAME
 
-CPAN::Meta::Prereqs::Diff - Compare dependencies between releases using CPAN Meta.
+CPAN::Meta::Prereqs::Diff - Compare dependencies between releases using CPAN::Meta.
 
 =head1 VERSION
 
