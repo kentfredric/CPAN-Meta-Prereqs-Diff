@@ -33,6 +33,7 @@ matrix:
       env: STERILIZE_ENV=0 RELEASE_TESTING=1 AUTHOR_TESTING=1
 before_install:
   - perlbrew list
+  - time git clone https://github.com/kentfredric/travis-scripts.git maint-travis-ci
   - time perl ./maint-travis-ci/branch_reset.pl
   - time perl ./maint-travis-ci/sterilize_env.pl
 install:
