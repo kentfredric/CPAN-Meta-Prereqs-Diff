@@ -5,6 +5,8 @@ use utf8;
 
 package CPAN::Meta::Prereqs::Diff::Role::Change;
 
+our $VERSION = '0.001000';
+
 # ABSTRACT: A base behaviour for prereq changes
 
 # AUTHORITY
