@@ -57,7 +57,7 @@ sub _dep_remove {
 ## no critic (Subroutines::ProhibitManyArgs)
 sub _dep_change {
   my ( undef, $phase, $type, $module, $old_requirement, $new_requirement ) = @_;
-  if ( $old_requirement =~ /[<>=, ]/ or $new_requirement =~ /[<>=, ]/ ) {
+  if ( $old_requirement =~ /[<>=, ]/msx or $new_requirement =~ /[<>=, ]/msx ) {
     return CPAN::Meta::Prereqs::Diff::Change->new(
       phase           => $phase,
       type            => $type,
