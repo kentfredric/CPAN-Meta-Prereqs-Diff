@@ -98,7 +98,11 @@ sub _get_prereqs {
     return CPAN::Meta::Prereqs->new($input_prereqs);
   }
   require Carp;
-  Carp::croak(q[ prereqs parameters take either CPAN::Meta::Prereqs, CPAN::Meta, or a valid CPAN::Meta::Prereqs hash structure]);
+  my $message = <<'EOF';
+prereqs parameters take either CPAN::Meta::Prereqs, CPAN::Meta,
+or a valid CPAN::Meta::Prereqs hash structure.
+EOF
+  return Carp::croak($message);
 }
 
 sub _phase_rel_diff {
