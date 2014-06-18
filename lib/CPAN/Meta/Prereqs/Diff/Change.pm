@@ -20,12 +20,13 @@ with 'CPAN::Meta::Prereqs::Diff::Role::Change';
 
 sub is_addition  { }
 sub is_removal   { }
-sub is_change    { 1 }
+sub is_change    { return 1 }
 sub is_upgrade   { }
 sub is_downgrade { }
 
 sub describe {
-  return sprintf q[%s.%s: ~%s %s -> %s], $_[0]->phase, $_[0]->type, $_[0]->module, $_[0]->old_requirement, $_[0]->new_requirement;
+  my ($self) = @_;
+  return sprintf q[%s.%s: ~%s %s -> %s], $self->phase, $self->type, $self->module, $self->old_requirement, $self->new_requirement;
 }
 
 no Moo;
