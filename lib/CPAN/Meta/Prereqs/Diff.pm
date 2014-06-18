@@ -26,16 +26,16 @@ has 'old_prereqs' => ( is => ro =>, required => 1 );
 has '_real_old_prereqs' => (
   is      => ro  =>,
   lazy    => 1,
-  builder => sub { return $_[0]->_get_prereqs( $_[0]->old_prereqs ) }
+  builder => sub { return $_[0]->_get_prereqs( $_[0]->old_prereqs ) },
 );
 has '_real_new_prereqs' => (
   is      => ro  =>,
   lazy    => 1,
-  builder => sub { return $_[0]->_get_prereqs( $_[0]->new_prereqs ) }
+  builder => sub { return $_[0]->_get_prereqs( $_[0]->new_prereqs ) },
 );
 
 sub _dep_add {
-  my ( $self, $phase, $type, $module, $requirement ) = @_;
+  my ( undef, $phase, $type, $module, $requirement ) = @_;
   return CPAN::Meta::Prereqs::Diff::Addition->new(
     phase       => $phase,
     type        => $type,
@@ -45,7 +45,7 @@ sub _dep_add {
 }
 
 sub _dep_remove {
-  my ( $self, $phase, $type, $module, $requirement ) = @_;
+  my ( undef, $phase, $type, $module, $requirement ) = @_;
   return CPAN::Meta::Prereqs::Diff::Removal->new(
     phase       => $phase,
     type        => $type,
@@ -54,8 +54,9 @@ sub _dep_remove {
   );
 }
 
+## no critic (Subroutines::ProhibitManyArgs)
 sub _dep_change {
-  my ( $self, $phase, $type, $module, $old_requirement, $new_requirement ) = @_;
+  my ( undef, $phase, $type, $module, $old_requirement, $new_requirement ) = @_;
   if ( $old_requirement =~ /[<>=, ]/ or $new_requirement =~ /[<>=, ]/ ) {
     return CPAN::Meta::Prereqs::Diff::Change->new(
       phase           => $phase,
@@ -88,7 +89,7 @@ sub _dep_change {
 }
 
 sub _get_prereqs {
-  my ( $self, $input_prereqs ) = @_;
+  my ( undef, $input_prereqs ) = @_;
   if ( ref $input_prereqs and blessed $input_prereqs ) {
     return $input_prereqs if $input_prereqs->isa('CPAN::Meta::Prereqs');
     return $input_prereqs->effective_prereqs if $input_prereqs->isa('CPAN::Meta');
@@ -102,7 +103,7 @@ sub _get_prereqs {
 prereqs parameters take either CPAN::Meta::Prereqs, CPAN::Meta,
 or a valid CPAN::Meta::Prereqs hash structure.
 EOF
-  return Carp::croak($message);
+  Carp::croak($message);
 }
 
 sub _phase_rel_diff {
