@@ -2,7 +2,7 @@ use strict;
 use warnings;
 
 package CPAN::Meta::Prereqs::Diff;
-$CPAN::Meta::Prereqs::Diff::VERSION = '0.001000';
+
 # ABSTRACT: Compare dependencies between releases using CPAN Meta.
 
 use Moo 1.000008 qw( has );
@@ -165,7 +165,7 @@ CPAN::Meta::Prereqs::Diff - Compare dependencies between releases using CPAN Met
 
 =head1 VERSION
 
-version 0.001000
+version 0.000000
 
 =head1 AUTHOR
 

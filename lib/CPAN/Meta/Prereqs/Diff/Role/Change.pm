@@ -4,7 +4,7 @@ use warnings;
 use utf8;
 
 package CPAN::Meta::Prereqs::Diff::Role::Change;
-$CPAN::Meta::Prereqs::Diff::Role::Change::VERSION = '0.001000';
+
 # ABSTRACT: A base behaviour for prereq changes
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
@@ -36,7 +36,7 @@ CPAN::Meta::Prereqs::Diff::Role::Change - A base behaviour for prereq changes
 
 =head1 VERSION
 
-version 0.001000
+version 0.000000
 
 =head1 AUTHOR
 
