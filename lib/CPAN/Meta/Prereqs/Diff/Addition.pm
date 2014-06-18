@@ -17,12 +17,13 @@ has 'requirement' => ( is => ro =>, required => 1 );
 
 with 'CPAN::Meta::Prereqs::Diff::Role::Change';
 
-sub is_addition { 1 }
+sub is_addition { return 1 }
 sub is_removal  { }
 sub is_change   { }
 
 sub describe {
-  return sprintf q[%s.%s: +%s %s], $_[0]->phase, $_[0]->type, $_[0]->module, $_[0]->requirement;
+  my ($self) = @_;
+  return sprintf q[%s.%s: +%s %s], $self->phase, $self->type, $self->module, $self->requirement;
 }
 
 no Moo;
