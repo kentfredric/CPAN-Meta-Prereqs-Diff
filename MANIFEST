@@ -10,6 +10,7 @@ META.yml
 Makefile.PL
 README
 dist.ini
+dist.ini.meta
 lib/CPAN/Meta/Prereqs/Diff.pm
 lib/CPAN/Meta/Prereqs/Diff/Addition.pm
 lib/CPAN/Meta/Prereqs/Diff/Change.pm
