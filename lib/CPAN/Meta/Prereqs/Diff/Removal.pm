@@ -13,6 +13,10 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Moo qw( with has );
 
+
+
+
+
 has 'requirement' => ( is => ro =>, required => 1 );
 
 with 'CPAN::Meta::Prereqs::Diff::Role::Change';
@@ -77,6 +81,10 @@ version 0.001000
   $object->describe();
 
   # runtime.requires: -ExtUtils::MakeMaker 5.0
+
+=head1 ATTRIBUTES
+
+=head2 C<requirement>
 
 =head1 AUTHOR
 
