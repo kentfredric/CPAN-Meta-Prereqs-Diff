@@ -335,7 +335,7 @@ version 0.001000
 
 Returns a list of C<Objects> that C<do> L<< C<CPAN::Meta::Prereqs::Diff::Role::Change>|CPAN::Meta::Prereqs::Diff::Role::Change >>, describing the changes between C<old_prereqs> and C<new_prereqs>
 
-=head3 C<%options>
+=head3 C<diff.%options>
 
 =head4 C<diff.options.phases>
 
