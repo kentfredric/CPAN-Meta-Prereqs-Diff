@@ -19,7 +19,7 @@ lib/CPAN/Meta/Prereqs/Diff/Removal.pm
 lib/CPAN/Meta/Prereqs/Diff/Role/Change.pm
 lib/CPAN/Meta/Prereqs/Diff/Upgrade.pm
 maint/perlcritic.rc.gen.pl
-perlcritic.deps
+misc/perlcritic.deps
 perlcritic.rc
 t/00-compile/lib_CPAN_Meta_Prereqs_Diff_Addition_pm.t
 t/00-compile/lib_CPAN_Meta_Prereqs_Diff_Change_pm.t
