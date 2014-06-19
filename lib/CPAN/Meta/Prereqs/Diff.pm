@@ -73,7 +73,22 @@ use CPAN::Meta::Prereqs::Diff::Change;
 use CPAN::Meta::Prereqs::Diff::Upgrade;
 use CPAN::Meta::Prereqs::Diff::Downgrade;
 
+
+
+
+
+
+
+
 has 'new_prereqs' => ( is => ro =>, required => 1 );
+
+
+
+
+
+
+
+
 has 'old_prereqs' => ( is => ro =>, required => 1 );
 
 has '_real_old_prereqs' => (
@@ -197,6 +212,34 @@ sub _phase_rel_diff {
   return @out_diff;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 sub diff {
   my ( $self, %options ) = @_;
   my @phases = @{ exists $options{phases} ? $options{phases} : [qw( configure build runtime test )] };
@@ -281,6 +324,46 @@ version 0.001000
       next;
     }
   }
+
+=head1 METHODS
+
+=head2 C<diff>
+
+  my @out = $diff->diff( %options );
+
+Returns a list of C<Objects> that C<do> L<< C<CPAN::Meta::Prereqs::Diff::Role::Change>|CPAN::Meta::Prereqs::Diff::Role::Change >>, describing the changes between C<old_prereqs> and C<new_prereqs>
+
+=head4 C<diff.options.phases>
+
+  my @out = $diff->diff(
+    phases => [ ... ]
+  );
+
+  ArrayRef
+  default         = [qw( configure build runtime test )]
+  valid options   = [qw( configure build runtime test develop )]
+
+=head4 C<diff.options.types>
+
+  my @out = $diff->diff(
+    types => [ ... ]
+  );
+
+  ArrayRef
+  default         = [qw( requires recommends suggests conflicts )]
+  valid options   = [qw( requires recommends suggests conflicts )]
+
+=head1 ATTRIBUTES
+
+=head2 C<new_prereqs>
+
+  required
+  HashRef | CPAN::Meta::Prereqs | CPAN::Meta
+
+=head2 C<old_prereqs>
+
+  required
+  HashRef | CPAN::Meta::Prereqs | CPAN::Meta
 
 =head1 AUTHOR
 

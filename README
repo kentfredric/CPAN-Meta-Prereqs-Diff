@@ -55,6 +55,41 @@ SYNOPSIS
         }
       }
 
+METHODS
+  "diff"
+      my @out = $diff->diff( %options );
+
+    Returns a list of "Objects" that "do"
+    "CPAN::Meta::Prereqs::Diff::Role::Change", describing the changes
+    between "old_prereqs" and "new_prereqs"
+
+   "diff.options.phases"
+      my @out = $diff->diff(
+        phases => [ ... ]
+      );
+
+      ArrayRef
+      default         = [qw( configure build runtime test )]
+      valid options   = [qw( configure build runtime test develop )]
+
+   "diff.options.types"
+      my @out = $diff->diff(
+        types => [ ... ]
+      );
+
+      ArrayRef
+      default         = [qw( requires recommends suggests conflicts )]
+      valid options   = [qw( requires recommends suggests conflicts )]
+
+ATTRIBUTES
+  "new_prereqs"
+      required
+      HashRef | CPAN::Meta::Prereqs | CPAN::Meta
+
+  "old_prereqs"
+      required
+      HashRef | CPAN::Meta::Prereqs | CPAN::Meta
+
 AUTHOR
     Kent Fredric <kentfredric@gmail.com>
 
