@@ -57,6 +57,54 @@ version 0.001000
       }
     }
 
+# METHODS
+
+## `diff`
+
+    my @out = $diff->diff( %options );
+
+Returns a list of `Objects` that `do` [`CPAN::Meta::Prereqs::Diff::Role::Change`](https://metacpan.org/pod/CPAN::Meta::Prereqs::Diff::Role::Change), describing the changes between `old_prereqs` and `new_prereqs`
+
+- [`Addition`](https://metacpan.org/pod/CPAN::Meta::Prereqs::Diff::Addition)
+- [`Change`](https://metacpan.org/pod/CPAN::Meta::Prereqs::Diff::Change)
+- [`Upgrade`](https://metacpan.org/pod/CPAN::Meta::Prereqs::Diff::Upgrade)
+- [`Downgrade`](https://metacpan.org/pod/CPAN::Meta::Prereqs::Diff::Downgrade)
+- [`Removal`](https://metacpan.org/pod/CPAN::Meta::Prereqs::Diff::Removal)
+
+### `diff.%options`
+
+#### `diff.options.phases`
+
+    my @out = $diff->diff(
+      phases => [ ... ]
+    );
+
+    ArrayRef
+    default         = [qw( configure build runtime test )]
+    valid options   = [qw( configure build runtime test develop )]
+
+#### `diff.options.types`
+
+    my @out = $diff->diff(
+      types => [ ... ]
+    );
+
+    ArrayRef
+    default         = [qw( requires recommends suggests conflicts )]
+    valid options   = [qw( requires recommends suggests conflicts )]
+
+# ATTRIBUTES
+
+## `new_prereqs`
+
+    required
+    HashRef | CPAN::Meta::Prereqs | CPAN::Meta
+
+## `old_prereqs`
+
+    required
+    HashRef | CPAN::Meta::Prereqs | CPAN::Meta
+
 # AUTHOR
 
 Kent Fredric <kentfredric@gmail.com>

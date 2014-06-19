@@ -73,7 +73,22 @@ use CPAN::Meta::Prereqs::Diff::Change;
 use CPAN::Meta::Prereqs::Diff::Upgrade;
 use CPAN::Meta::Prereqs::Diff::Downgrade;
 
+=attr C<new_prereqs>
+
+  required
+  HashRef | CPAN::Meta::Prereqs | CPAN::Meta
+
+=cut
+
 has 'new_prereqs' => ( is => ro =>, required => 1 );
+
+=attr C<old_prereqs>
+
+  required
+  HashRef | CPAN::Meta::Prereqs | CPAN::Meta
+
+=cut
+
 has 'old_prereqs' => ( is => ro =>, required => 1 );
 
 has '_real_old_prereqs' => (
@@ -196,6 +211,50 @@ sub _phase_rel_diff {
   }
   return @out_diff;
 }
+
+=method C<diff>
+
+  my @out = $diff->diff( %options );
+
+Returns a list of C<Objects> that C<do> L<< C<CPAN::Meta::Prereqs::Diff::Role::Change>|CPAN::Meta::Prereqs::Diff::Role::Change >>, describing the changes between C<old_prereqs> and C<new_prereqs>
+
+=over 4
+
+=item * L<< C<Addition>|CPAN::Meta::Prereqs::Diff::Addition >>
+
+=item * L<< C<Change>|CPAN::Meta::Prereqs::Diff::Change >>
+
+=item * L<< C<Upgrade>|CPAN::Meta::Prereqs::Diff::Upgrade >>
+
+=item * L<< C<Downgrade>|CPAN::Meta::Prereqs::Diff::Downgrade >>
+
+=item * L<< C<Removal>|CPAN::Meta::Prereqs::Diff::Removal >>
+
+=back
+
+=head3 C<diff.%options>
+
+=head4 C<diff.options.phases>
+
+  my @out = $diff->diff(
+    phases => [ ... ]
+  );
+
+  ArrayRef
+  default         = [qw( configure build runtime test )]
+  valid options   = [qw( configure build runtime test develop )]
+
+=head4 C<diff.options.types>
+
+  my @out = $diff->diff(
+    types => [ ... ]
+  );
+
+  ArrayRef
+  default         = [qw( requires recommends suggests conflicts )]
+  valid options   = [qw( requires recommends suggests conflicts )]
+
+=cut
 
 sub diff {
   my ( $self, %options ) = @_;
