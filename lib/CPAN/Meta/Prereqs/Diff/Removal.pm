@@ -13,6 +13,10 @@ our $VERSION = '0.001000';
 
 use Moo qw( with has );
 
+=attr C<requirement>
+
+=cut
+
 has 'requirement' => ( is => ro =>, required => 1 );
 
 with 'CPAN::Meta::Prereqs::Diff::Role::Change';
