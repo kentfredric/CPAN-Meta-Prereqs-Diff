@@ -15,7 +15,21 @@ use Moo qw( with has extends );
 
 extends 'CPAN::Meta::Prereqs::Diff::Change';
 
+=method C<is_upgrade>
+
+  returns true
+
+=cut
+
 sub is_upgrade { return 1 }
+
+=method C<describe>
+
+  $object->describe();
+
+  # runtime.requires: ^^^ ExtUtils::MakeMaker 5.0 -> 5.1
+
+=cut
 
 sub describe {
   my ($self) = @_;
