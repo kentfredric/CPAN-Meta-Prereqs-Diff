@@ -68,11 +68,11 @@ version 0.001000
 
 =head2 C<phase>
 
-The dependency phase ( ie: C<runtime>,C<configure> )
+The dependency phase ( such as: C<runtime>,C<configure> )
 
 =head2 C<type>
 
-The dependency type ( ie: C<requires>,C<suggests> )
+The dependency type ( such as: C<requires>,C<suggests> )
 
 =head2 C<module>
 
