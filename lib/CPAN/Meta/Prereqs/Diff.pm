@@ -242,6 +242,20 @@ sub _phase_rel_diff {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 sub diff {
   my ( $self, %options ) = @_;
   my @phases = @{ exists $options{phases} ? $options{phases} : [qw( configure build runtime test )] };
@@ -334,6 +348,20 @@ version 0.001000
   my @out = $diff->diff( %options );
 
 Returns a list of C<Objects> that C<do> L<< C<CPAN::Meta::Prereqs::Diff::Role::Change>|CPAN::Meta::Prereqs::Diff::Role::Change >>, describing the changes between C<old_prereqs> and C<new_prereqs>
+
+=over 4
+
+=item * L<< C<Addition>|CPAN::Meta::Prereqs::Diff::Addition >>
+
+=item * L<< C<Change>|CPAN::Meta::Prereqs::Diff::Change >>
+
+=item * L<< C<Upgrade>|CPAN::Meta::Prereqs::Diff::Upgrade >>
+
+=item * L<< C<Downgrade>|CPAN::Meta::Prereqs::Diff::Downgrade >>
+
+=item * L<< C<Removal>|CPAN::Meta::Prereqs::Diff::Removal >>
+
+=back
 
 =head3 C<diff.%options>
 

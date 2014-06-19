@@ -63,6 +63,16 @@ METHODS
     "CPAN::Meta::Prereqs::Diff::Role::Change", describing the changes
     between "old_prereqs" and "new_prereqs"
 
+    *   "Addition"
+
+    *   "Change"
+
+    *   "Upgrade"
+
+    *   "Downgrade"
+
+    *   "Removal"
+
    "diff.%options"
    "diff.options.phases"
       my @out = $diff->diff(
