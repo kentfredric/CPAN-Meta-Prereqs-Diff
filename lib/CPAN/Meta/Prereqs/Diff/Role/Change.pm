@@ -13,9 +13,33 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Moo::Role qw( has requires );
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 has 'phase'  => ( is => ro =>, required => 1, );
 has 'type'   => ( is => ro =>, required => 1, );
 has 'module' => ( is => ro =>, required => 1, );
+
+
+
+
+
+
+
+
+
+
 
 requires is_addition =>;
 requires is_removal  =>;
@@ -39,6 +63,30 @@ CPAN::Meta::Prereqs::Diff::Role::Change - A base behavior for prerequisite chang
 =head1 VERSION
 
 version 0.001000
+
+=head1 ATTRIBUTES
+
+=head2 C<phase>
+
+The dependency phase ( ie: C<runtime>,C<configure> )
+
+=head2 C<type>
+
+The dependency type ( ie: C<requires>,C<suggests> )
+
+=head2 C<module>
+
+The depended upon module
+
+=head1 REQUIRES
+
+=head2 C<is_addition>
+
+=head2 C<is_removal>
+
+=head2 C<is_change>
+
+=head2 C<describe>
 
 =head1 AUTHOR
 

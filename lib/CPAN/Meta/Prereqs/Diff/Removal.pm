@@ -17,9 +17,27 @@ has 'requirement' => ( is => ro =>, required => 1 );
 
 with 'CPAN::Meta::Prereqs::Diff::Role::Change';
 
+
+
+
+
+
+
+
+
+
+
 sub is_addition { }
 sub is_removal  { return 1 }
 sub is_change   { }
+
+
+
+
+
+
+
+
 
 sub describe {
   my ($self) = @_;
@@ -43,6 +61,22 @@ CPAN::Meta::Prereqs::Diff::Removal - An unneeded dependency
 =head1 VERSION
 
 version 0.001000
+
+=head1 METHODS
+
+=head2 C<is_addition>
+
+=head2 C<is_removal>
+
+  returns true
+
+=head2 C<is_change>
+
+=head2 C<describe>
+
+  $object->describe();
+
+  # runtime.requires: -ExtUtils::MakeMaker 5.0
 
 =head1 AUTHOR
 

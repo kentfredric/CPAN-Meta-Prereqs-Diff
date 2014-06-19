@@ -15,7 +15,21 @@ use Moo qw( with has extends );
 
 extends 'CPAN::Meta::Prereqs::Diff::Change';
 
+
+
+
+
+
+
 sub is_upgrade { return 1 }
+
+
+
+
+
+
+
+
 
 sub describe {
   my ($self) = @_;
@@ -40,6 +54,18 @@ CPAN::Meta::Prereqs::Diff::Upgrade - A dependency which changes its requirements
 =head1 VERSION
 
 version 0.001000
+
+=head1 METHODS
+
+=head2 C<is_upgrade>
+
+  returns true
+
+=head2 C<describe>
+
+  $object->describe();
+
+  # runtime.requires: ^^^ ExtUtils::MakeMaker 5.0 -> 5.1
 
 =head1 AUTHOR
 
