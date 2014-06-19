@@ -130,6 +130,7 @@ my $static_prereqs = do { my $x = {
                                      'Test::More' => '1.001003'
                                    },
                    'requires' => {
+                                   'CPAN::Meta' => '0',
                                    'ExtUtils::MakeMaker' => '0',
                                    'File::Spec::Functions' => '0',
                                    'List::Util' => '0',

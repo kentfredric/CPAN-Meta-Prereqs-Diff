@@ -3,6 +3,7 @@ abstract: 'Compare dependencies between releases using CPAN::Meta.'
 author:
   - 'Kent Fredric <kentfredric@gmail.com>'
 build_requires:
+  CPAN::Meta: '0'
   ExtUtils::MakeMaker: '0'
   File::Spec::Functions: '0'
   List::Util: '0'

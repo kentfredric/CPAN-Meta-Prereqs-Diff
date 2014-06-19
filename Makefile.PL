@@ -32,6 +32,7 @@ my %WriteMakefileArgs = (
     "warnings" => 0
   },
   "TEST_REQUIRES" => {
+    "CPAN::Meta" => 0,
     "ExtUtils::MakeMaker" => 0,
     "File::Spec::Functions" => 0,
     "List::Util" => 0,
@@ -45,6 +46,7 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
+  "CPAN::Meta" => 0,
   "CPAN::Meta::Prereqs" => 0,
   "Carp" => 0,
   "ExtUtils::MakeMaker" => 0,
