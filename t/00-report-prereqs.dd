@@ -66,6 +66,7 @@ do { my $x = {
        'runtime' => {
                       'requires' => {
                                       'CPAN::Meta::Prereqs' => '0',
+                                      'CPAN::Meta::Requirements' => '2.120620',
                                       'Carp' => '0',
                                       'List::MoreUtils' => '0',
                                       'Moo' => '1.000008',

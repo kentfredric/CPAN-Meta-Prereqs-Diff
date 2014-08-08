@@ -81,6 +81,7 @@
       "runtime" : {
          "requires" : {
             "CPAN::Meta::Prereqs" : "0",
+            "CPAN::Meta::Requirements" : "2.120620",
             "Carp" : "0",
             "List::MoreUtils" : "0",
             "Moo" : "1.000008",
@@ -154,6 +155,7 @@
       "modules" : {
          "CPAN::Meta" : "2.142060",
          "CPAN::Meta::Prereqs" : "2.142060",
+         "CPAN::Meta::Requirements" : "2.126",
          "Carp" : "1.34",
          "Dist::Zilla::App::Command::bakeini" : "0.001001",
          "Dist::Zilla::Plugin::Authority" : "1.006",
