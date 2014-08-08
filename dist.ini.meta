@@ -20,3 +20,4 @@ copyfiles         = LICENSE
 ; auto_prereqs_skip = File::Find
 
 [Prereqs]
+CPAN::Meta::Requirements = 2.120620 ; before this version, tests fail with invalid versions.
