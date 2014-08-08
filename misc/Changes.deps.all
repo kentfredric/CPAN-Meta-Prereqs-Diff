@@ -14,6 +14,9 @@ This file contains ALL changes in dependencies in both REQUIRED / OPTIONAL depen
  - Dist::Zilla::App::Command::bakeini 0.001000 → 0.001001
  - Dist::Zilla::PluginBundle::Author::KENTNL 2.016000 → 2.016007
 
+ [Changed / runtime requires]
+ - CPAN::Meta::Prereqs 0 → 2.120620
+
  [Changed / test recommends]
  - CPAN::Meta 0 → 2.120900
  - Test::More 1.001003 → 1.301001_024

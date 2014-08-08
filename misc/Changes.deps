@@ -10,6 +10,9 @@ This file contains changes in REQUIRED dependencies for standard CPAN phases (co
  [Changed / configure requires]
  - ExtUtils::MakeMaker 6.30 → 0
 
+ [Changed / runtime requires]
+ - CPAN::Meta::Prereqs 0 → 2.120620
+
  [Removed / test requires]
  - File::Spec::Functions
  - List::Util
