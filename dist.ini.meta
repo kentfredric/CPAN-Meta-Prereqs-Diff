@@ -21,3 +21,4 @@ copyfiles         = LICENSE
 
 [Prereqs]
 CPAN::Meta::Requirements = 2.120620 ; before this version, tests fail with invalid versions.
+CPAN::Meta::Prereqs      = 2.120620 ; before this version, tests fail with invalid versions.

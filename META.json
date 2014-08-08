@@ -80,7 +80,7 @@
       },
       "runtime" : {
          "requires" : {
-            "CPAN::Meta::Prereqs" : "0",
+            "CPAN::Meta::Prereqs" : "2.120620",
             "CPAN::Meta::Requirements" : "2.120620",
             "Carp" : "0",
             "List::MoreUtils" : "0",

@@ -20,7 +20,7 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "CPAN::Meta::Prereqs::Diff",
   "PREREQ_PM" => {
-    "CPAN::Meta::Prereqs" => 0,
+    "CPAN::Meta::Prereqs" => "2.120620",
     "CPAN::Meta::Requirements" => "2.120620",
     "Carp" => 0,
     "List::MoreUtils" => 0,
@@ -47,7 +47,7 @@ my %WriteMakefileArgs = (
 
 my %FallbackPrereqs = (
   "CPAN::Meta" => 0,
-  "CPAN::Meta::Prereqs" => 0,
+  "CPAN::Meta::Prereqs" => "2.120620",
   "CPAN::Meta::Requirements" => "2.120620",
   "Carp" => 0,
   "ExtUtils::MakeMaker" => 0,
