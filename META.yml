@@ -52,9 +52,9 @@ requires:
   version: '0'
   warnings: '0'
 resources:
-  bugtracker: https://github.com/kentfredric/CPAN-Meta-Prereqs-Diff/issues
-  homepage: https://github.com/kentfredric/CPAN-Meta-Prereqs-Diff
-  repository: https://github.com/kentfredric/CPAN-Meta-Prereqs-Diff.git
+  bugtracker: https://github.com/kentnl/CPAN-Meta-Prereqs-Diff/issues
+  homepage: https://github.com/kentnl/CPAN-Meta-Prereqs-Diff
+  repository: https://github.com/kentnl/CPAN-Meta-Prereqs-Diff.git
 version: '0.001001'
 x_BuiltWith:
   modules:

@@ -141,13 +141,13 @@
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/kentfredric/CPAN-Meta-Prereqs-Diff/issues"
+         "web" : "https://github.com/kentnl/CPAN-Meta-Prereqs-Diff/issues"
       },
-      "homepage" : "https://github.com/kentfredric/CPAN-Meta-Prereqs-Diff",
+      "homepage" : "https://github.com/kentnl/CPAN-Meta-Prereqs-Diff",
       "repository" : {
          "type" : "git",
-         "url" : "https://github.com/kentfredric/CPAN-Meta-Prereqs-Diff.git",
-         "web" : "https://github.com/kentfredric/CPAN-Meta-Prereqs-Diff"
+         "url" : "https://github.com/kentnl/CPAN-Meta-Prereqs-Diff.git",
+         "web" : "https://github.com/kentnl/CPAN-Meta-Prereqs-Diff"
       }
    },
    "version" : "0.001001",
