@@ -11,59 +11,6 @@ our $VERSION = '0.001002';
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 use Moo 1.000008 qw( has );
 use List::MoreUtils qw( uniq );
 use Scalar::Util qw( blessed );

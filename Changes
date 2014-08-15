@@ -1,6 +1,6 @@
 Release history for CPAN-Meta-Prereqs-Diff
 
-0.001002 2014-08-09T00:46:41Z
+0.001002 2014-08-15T05:03:11Z
  [Dependencies::Stats]
  - Dependencies changed since 0.001001, see misc/*.deps* for details
  - develop: +1 (suggests: ↑1)
