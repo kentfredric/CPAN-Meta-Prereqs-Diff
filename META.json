@@ -112,31 +112,31 @@
    "provides" : {
       "CPAN::Meta::Prereqs::Diff" : {
          "file" : "lib/CPAN/Meta/Prereqs/Diff.pm",
-         "version" : "0.001002"
+         "version" : "0.001003"
       },
       "CPAN::Meta::Prereqs::Diff::Addition" : {
          "file" : "lib/CPAN/Meta/Prereqs/Diff/Addition.pm",
-         "version" : "0.001002"
+         "version" : "0.001003"
       },
       "CPAN::Meta::Prereqs::Diff::Change" : {
          "file" : "lib/CPAN/Meta/Prereqs/Diff/Change.pm",
-         "version" : "0.001002"
+         "version" : "0.001003"
       },
       "CPAN::Meta::Prereqs::Diff::Downgrade" : {
          "file" : "lib/CPAN/Meta/Prereqs/Diff/Downgrade.pm",
-         "version" : "0.001002"
+         "version" : "0.001003"
       },
       "CPAN::Meta::Prereqs::Diff::Removal" : {
          "file" : "lib/CPAN/Meta/Prereqs/Diff/Removal.pm",
-         "version" : "0.001002"
+         "version" : "0.001003"
       },
       "CPAN::Meta::Prereqs::Diff::Role::Change" : {
          "file" : "lib/CPAN/Meta/Prereqs/Diff/Role/Change.pm",
-         "version" : "0.001002"
+         "version" : "0.001003"
       },
       "CPAN::Meta::Prereqs::Diff::Upgrade" : {
          "file" : "lib/CPAN/Meta/Prereqs/Diff/Upgrade.pm",
-         "version" : "0.001002"
+         "version" : "0.001003"
       }
    },
    "release_status" : "stable",
@@ -151,7 +151,7 @@
          "web" : "https://github.com/kentnl/CPAN-Meta-Prereqs-Diff"
       }
    },
-   "version" : "0.001002",
+   "version" : "0.001003",
    "x_BuiltWith" : {
       "modules" : {
          "CPAN::Meta" : "2.142060",
@@ -656,7 +656,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : null,
                   "signed" : 0,
-                  "tag" : "0.001002-source",
+                  "tag" : "0.001003-source",
                   "tag_format" : "%v-source",
                   "tag_message" : "v%v",
                   "time_zone" : "local"
@@ -727,7 +727,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : "releases",
                   "signed" : 0,
-                  "tag" : "0.001002",
+                  "tag" : "0.001003",
                   "tag_format" : "%v",
                   "tag_message" : "v%v",
                   "time_zone" : "local"

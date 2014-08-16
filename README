@@ -3,7 +3,7 @@ NAME
     CPAN::Meta.
 
 VERSION
-    version 0.001002
+    version 0.001003
 
 SYNOPSIS
       use CPAN::Meta::Prereqs::Diff;

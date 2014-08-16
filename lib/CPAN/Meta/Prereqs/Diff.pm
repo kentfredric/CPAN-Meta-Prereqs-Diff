@@ -5,7 +5,7 @@ use utf8;
 
 package CPAN::Meta::Prereqs::Diff;
 
-our $VERSION = '0.001002';
+our $VERSION = '0.001003';
 
 # ABSTRACT: Compare dependencies between releases using CPAN::Meta.
 
@@ -235,7 +235,7 @@ CPAN::Meta::Prereqs::Diff - Compare dependencies between releases using CPAN::Me
 
 =head1 VERSION
 
-version 0.001002
+version 0.001003
 
 =head1 SYNOPSIS
 
