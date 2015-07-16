@@ -11,7 +11,6 @@ our $VERSION = '0.001003';
 # AUTHORITY
 
 use Moo 1.000008 qw( has );
-use List::MoreUtils qw( uniq );
 use Scalar::Util qw( blessed );
 use CPAN::Meta::Prereqs::Diff::Addition;
 use CPAN::Meta::Prereqs::Diff::Removal;
