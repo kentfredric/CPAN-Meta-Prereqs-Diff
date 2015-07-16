@@ -11,7 +11,7 @@ version 0.001003
     use CPAN::Meta::Prereqs::Diff;
 
 
-    my $diff = CPAN::Meta::Diff->new(
+    my $diff = CPAN::Meta::Prereqs::Diff->new(
       new_prereqs => CPAN::Meta->load_file('Dist-Foo-1.01/META.json')->effective_prereqs
       old_prereqs => CPAN::Meta->load_file('Dist-Foo-1.00/META.json')->effective_prereqs
     );
@@ -56,6 +56,11 @@ version 0.001003
         next;
       }
     }
+
+# DESCRIPTION
+
+This module allows relatively straight forward routines for comparing and itemizing
+two sets of `CPAN::Meta` prerequisites, plucking out kinds of changes that are interesting.
 
 # METHODS
 
