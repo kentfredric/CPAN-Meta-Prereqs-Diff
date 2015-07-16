@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use 5.008;
+use 5.006;
 
 use ExtUtils::MakeMaker;
 
@@ -15,7 +15,7 @@ my %WriteMakefileArgs = (
   "DISTNAME" => "CPAN-Meta-Prereqs-Diff",
   "EXE_FILES" => [],
   "LICENSE" => "perl",
-  "MIN_PERL_VERSION" => "5.008",
+  "MIN_PERL_VERSION" => "5.006",
   "NAME" => "CPAN::Meta::Prereqs::Diff",
   "PREREQ_PM" => {
     "CPAN::Meta::Prereqs" => "2.120620",
@@ -26,7 +26,6 @@ my %WriteMakefileArgs = (
     "Moo::Role" => 0,
     "Scalar::Util" => 0,
     "strict" => 0,
-    "utf8" => 0,
     "version" => 0,
     "warnings" => 0
   },
@@ -56,7 +55,6 @@ my %FallbackPrereqs = (
   "Scalar::Util" => 0,
   "Test::More" => "0.89",
   "strict" => 0,
-  "utf8" => 0,
   "version" => 0,
   "warnings" => 0
 );
