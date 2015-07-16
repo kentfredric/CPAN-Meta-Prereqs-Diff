@@ -4,7 +4,7 @@ use warnings;
 
 package CPAN::Meta::Prereqs::Diff;
 
-our $VERSION = '0.001003';
+our $VERSION = '0.001004';
 
 # ABSTRACT: Compare dependencies between releases using CPAN::Meta.
 

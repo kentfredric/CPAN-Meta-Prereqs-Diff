@@ -4,7 +4,7 @@ use warnings;
 
 package CPAN::Meta::Prereqs::Diff::Removal;
 
-our $VERSION = '0.001003';
+our $VERSION = '0.001004';
 
 # ABSTRACT: An unneeded dependency
 
