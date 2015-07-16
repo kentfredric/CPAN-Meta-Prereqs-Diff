@@ -107,7 +107,7 @@ Returns a list of `Objects` that `do` [`CPAN::Meta::Prereqs::Diff::Role::Change`
 
 # AUTHOR
 
-Kent Fredric <kentfredric@gmail.com>
+Kent Fredric <kentnl@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
