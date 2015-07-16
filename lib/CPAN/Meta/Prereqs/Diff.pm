@@ -1,18 +1,16 @@
-use 5.008;    # utf8
+use 5.006; # our
 use strict;
 use warnings;
-use utf8;
 
 package CPAN::Meta::Prereqs::Diff;
 
-our $VERSION = '0.001002';
+our $VERSION = '0.001003';
 
 # ABSTRACT: Compare dependencies between releases using CPAN::Meta.
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Moo 1.000008 qw( has );
-use List::MoreUtils qw( uniq );
 use Scalar::Util qw( blessed );
 use CPAN::Meta::Prereqs::Diff::Addition;
 use CPAN::Meta::Prereqs::Diff::Removal;
@@ -235,14 +233,14 @@ CPAN::Meta::Prereqs::Diff - Compare dependencies between releases using CPAN::Me
 
 =head1 VERSION
 
-version 0.001002
+version 0.001003
 
 =head1 SYNOPSIS
 
   use CPAN::Meta::Prereqs::Diff;
 
 
-  my $diff = CPAN::Meta::Diff->new(
+  my $diff = CPAN::Meta::Prereqs::Diff->new(
     new_prereqs => CPAN::Meta->load_file('Dist-Foo-1.01/META.json')->effective_prereqs
     old_prereqs => CPAN::Meta->load_file('Dist-Foo-1.00/META.json')->effective_prereqs
   );
@@ -287,6 +285,11 @@ version 0.001002
       next;
     }
   }
+
+=head1 DESCRIPTION
+
+This module allows relatively straight forward routines for comparing and itemizing
+two sets of C<CPAN::Meta> prerequisites, plucking out kinds of changes that are interesting.
 
 =head1 METHODS
 
@@ -346,11 +349,11 @@ Returns a list of C<Objects> that C<do> L<< C<CPAN::Meta::Prereqs::Diff::Role::C
 
 =head1 AUTHOR
 
-Kent Fredric <kentfredric@gmail.com>
+Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2014 by Kent Fredric <kentfredric@gmail.com>.
+This software is copyright (c) 2015 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
