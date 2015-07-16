@@ -1,7 +1,6 @@
-use 5.008;    # utf8
+use 5.006; # our
 use strict;
 use warnings;
-use utf8;
 
 package CPAN::Meta::Prereqs::Diff;
 
@@ -12,7 +11,6 @@ our $VERSION = '0.001003';
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Moo 1.000008 qw( has );
-use List::MoreUtils qw( uniq );
 use Scalar::Util qw( blessed );
 use CPAN::Meta::Prereqs::Diff::Addition;
 use CPAN::Meta::Prereqs::Diff::Removal;
@@ -242,7 +240,7 @@ version 0.001003
   use CPAN::Meta::Prereqs::Diff;
 
 
-  my $diff = CPAN::Meta::Diff->new(
+  my $diff = CPAN::Meta::Prereqs::Diff->new(
     new_prereqs => CPAN::Meta->load_file('Dist-Foo-1.01/META.json')->effective_prereqs
     old_prereqs => CPAN::Meta->load_file('Dist-Foo-1.00/META.json')->effective_prereqs
   );
@@ -287,6 +285,11 @@ version 0.001003
       next;
     }
   }
+
+=head1 DESCRIPTION
+
+This module allows relatively straight forward routines for comparing and itemizing
+two sets of C<CPAN::Meta> prerequisites, plucking out kinds of changes that are interesting.
 
 =head1 METHODS
 
@@ -346,7 +349,7 @@ Returns a list of C<Objects> that C<do> L<< C<CPAN::Meta::Prereqs::Diff::Role::C
 
 =head1 AUTHOR
 
-Kent Fredric <kentfredric@gmail.com>
+Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 

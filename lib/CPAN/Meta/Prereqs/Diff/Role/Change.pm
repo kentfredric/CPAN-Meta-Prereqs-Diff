@@ -1,7 +1,6 @@
-use 5.008;    # utf8
+use 5.006;    # our
 use strict;
 use warnings;
-use utf8;
 
 package CPAN::Meta::Prereqs::Diff::Role::Change;
 
@@ -90,7 +89,7 @@ The depended upon module
 
 =head1 AUTHOR
 
-Kent Fredric <kentfredric@gmail.com>
+Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
