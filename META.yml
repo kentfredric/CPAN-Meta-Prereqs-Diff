@@ -21,25 +21,25 @@ name: CPAN-Meta-Prereqs-Diff
 provides:
   CPAN::Meta::Prereqs::Diff:
     file: lib/CPAN/Meta/Prereqs/Diff.pm
-    version: '0.001004'
+    version: '0.001005'
   CPAN::Meta::Prereqs::Diff::Addition:
     file: lib/CPAN/Meta/Prereqs/Diff/Addition.pm
-    version: '0.001004'
+    version: '0.001005'
   CPAN::Meta::Prereqs::Diff::Change:
     file: lib/CPAN/Meta/Prereqs/Diff/Change.pm
-    version: '0.001004'
+    version: '0.001005'
   CPAN::Meta::Prereqs::Diff::Downgrade:
     file: lib/CPAN/Meta/Prereqs/Diff/Downgrade.pm
-    version: '0.001004'
+    version: '0.001005'
   CPAN::Meta::Prereqs::Diff::Removal:
     file: lib/CPAN/Meta/Prereqs/Diff/Removal.pm
-    version: '0.001004'
+    version: '0.001005'
   CPAN::Meta::Prereqs::Diff::Role::Change:
     file: lib/CPAN/Meta/Prereqs/Diff/Role/Change.pm
-    version: '0.001004'
+    version: '0.001005'
   CPAN::Meta::Prereqs::Diff::Upgrade:
     file: lib/CPAN/Meta/Prereqs/Diff/Upgrade.pm
-    version: '0.001004'
+    version: '0.001005'
 requires:
   CPAN::Meta::Prereqs: '2.120620'
   CPAN::Meta::Requirements: '2.120620'
@@ -55,4 +55,4 @@ resources:
   bugtracker: https://github.com/kentnl/CPAN-Meta-Prereqs-Diff/issues
   homepage: https://github.com/kentnl/CPAN-Meta-Prereqs-Diff
   repository: https://github.com/kentnl/CPAN-Meta-Prereqs-Diff.git
-version: '0.001004'
+version: '0.001005'

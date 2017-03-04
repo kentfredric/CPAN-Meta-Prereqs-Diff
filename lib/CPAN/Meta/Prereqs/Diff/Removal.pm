@@ -4,7 +4,7 @@ use warnings;
 
 package CPAN::Meta::Prereqs::Diff::Removal;
 
-our $VERSION = '0.001004';
+our $VERSION = '0.001005';
 
 # ABSTRACT: An unneeded dependency
 
@@ -63,7 +63,7 @@ CPAN::Meta::Prereqs::Diff::Removal - An unneeded dependency
 
 =head1 VERSION
 
-version 0.001004
+version 0.001005
 
 =head1 METHODS
 
