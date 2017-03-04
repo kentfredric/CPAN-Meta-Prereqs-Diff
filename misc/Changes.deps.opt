@@ -1,6 +1,8 @@
 This file contains changes in OPTIONAL dependencies for standard CPAN phases (configure/build/runtime/test)
 
-0.001004
+0.001005
+
+0.001004 2017-03-04T09:14:59Z
 
 0.001003 2015-07-16T20:41:42Z
  [Changed / configure recommends]
