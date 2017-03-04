@@ -4,7 +4,7 @@ use warnings;
 
 package CPAN::Meta::Prereqs::Diff::Role::Change;
 
-our $VERSION = '0.001003';
+our $VERSION = '0.001004';
 
 # ABSTRACT: A base behavior for prerequisite changes
 
@@ -61,7 +61,7 @@ CPAN::Meta::Prereqs::Diff::Role::Change - A base behavior for prerequisite chang
 
 =head1 VERSION
 
-version 0.001003
+version 0.001004
 
 =head1 ATTRIBUTES
 
@@ -93,7 +93,7 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2015 by Kent Fredric <kentfredric@gmail.com>.
+This software is copyright (c) 2017 by Kent Fredric <kentfredric@gmail.com>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
