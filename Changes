@@ -1,6 +1,8 @@
 Release history for CPAN-Meta-Prereqs-Diff
 
 {{$NEXT}}
+
+0.001004 2017-03-04T09:14:59Z d028807
  [Bugfix]
  - Avoid test failures on 5.26 w/ -Ddefault_inc_excludes_dot
  - Closes https://github.com/kentnl/CPAN-Meta-Prereqs-Diff/issues/1

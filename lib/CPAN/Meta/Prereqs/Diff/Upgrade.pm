@@ -4,7 +4,7 @@ use warnings;
 
 package CPAN::Meta::Prereqs::Diff::Upgrade;
 
-our $VERSION = '0.001004';
+our $VERSION = '0.001005';
 
 # ABSTRACT: A dependency which changes its requirements to a newer version
 
