@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use Test::More;
+use Test::More tests => 2;
 
 use CPAN::Meta::Prereqs::Diff;
 my $new_prereqs = {
@@ -98,24 +98,31 @@ my $diff = CPAN::Meta::Prereqs::Diff->new(
   new_prereqs => $new_prereqs,
   old_prereqs => $old_prereqs,
 );
+our $context = "";
 
-subtest "Basic" => sub {
+sub my_subtest ($$) {
+
+  #note "Beginning: $_[0] ]---";
+  local $context = " ($_[0])";
+  $_[1]->();
+
+  #note "Ending: $_[0] ]---";
+}
+
+my_subtest "Basic" => sub {
   my $i = 0;
   for my $diff_entry ( $diff->diff ) {
     note $diff_entry->describe;
     $i++;
   }
-  is( $i, 5, '5 differences with basic settings' );
+  is( $i, 5, "5 differences with basic settings$context" );
 };
 
-subtest "Develop" => sub {
+my_subtest "Develop" => sub {
   my $i = 0;
   for my $diff_entry ( $diff->diff( phases => [qw( configure build runtime test develop )] ) ) {
     note $diff_entry->describe;
     $i++;
   }
-  is( $i, 16, '5 differences with develop deps' );
+  is( $i, 16, "5 differences with develop deps$context" );
 };
-
-done_testing;
-
